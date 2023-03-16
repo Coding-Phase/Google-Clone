@@ -10,7 +10,7 @@ export default async function ImageSearchPage({ searchParams }) {
 	await new Promise((resolve) => setTimeout(resolve, 1500)); // Wait 1.5 seconds then fetch data
 
 	const response = await fetch(
-		`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${SearchQuery}&searchType=image&start=${startIndex}`
+		`https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CONTEXT_KEY}&q=${SearchQuery}&searchType=image&start=${startIndex}`
 	);
 
 	if (!response.ok) {
